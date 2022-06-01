@@ -1,42 +1,83 @@
 package com.example.axolotlmessenger
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.pm.PackageManager
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
+import com.example.axolotlmessenger.database.AUTH
+import com.example.axolotlmessenger.database.initFirebase
+import com.example.axolotlmessenger.database.initUser
 import com.example.axolotlmessenger.databinding.ActivityMainBinding
-import com.example.axolotlmessenger.ui.fragments.ChatsFragment
+import com.example.axolotlmessenger.ui.screens.main_list.MainListFragment
+import com.example.axolotlmessenger.ui.screens.register.EnterPhoneNumberFragment
 import com.example.axolotlmessenger.ui.objects.AppDrawer
+import com.example.axolotlmessenger.utilits.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+
+/* Главная активность*/
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mBinding: ActivityMainBinding
-    private lateinit var mAppDrawer: AppDrawer
-    private lateinit var mToolbar: Toolbar
-
+    lateinit var mAppDrawer: AppDrawer
+    lateinit var mToolbar: Toolbar
     override fun onCreate(savedInstanceState: Bundle?) {
+        /* Функция запускается один раз, при создании активити */
         super.onCreate(savedInstanceState)
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+        APP_ACTIVITY = this
+        initFirebase()
+        initUser {
+            CoroutineScope(Dispatchers.IO).launch {
+                initContacts()
+            }
+            initFields()
+            initFunc()
+        }
+
+    }
+
+
+
+    private fun initFunc() {
+        /* Функция инициализирует функциональность приложения */
+        setSupportActionBar(mToolbar)
+        if (AUTH.currentUser != null) {
+            mAppDrawer.create()
+            replaceFragment(MainListFragment(), false)
+        } else {
+            replaceFragment(EnterPhoneNumberFragment(),false)
+        }
+    }
+
+    private fun initFields() {
+        /* Функция инициализирует переменные */
+        mToolbar = mBinding.mainToolbar
+        mAppDrawer = AppDrawer()
     }
 
     override fun onStart() {
         super.onStart()
-        initFields()
-        initFunc()
-
+        AppStates.updateState(AppStates.ONLINE)
     }
 
-    private fun initFunc() {
-        setSupportActionBar(mToolbar)
-        mAppDrawer.create()
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.dataContainer, ChatsFragment()).commit()
+    override fun onStop() {
+        super.onStop()
+        AppStates.updateState(AppStates.OFFLINE)
     }
 
-
-
-    private fun initFields() {
-        mToolbar = mBinding.mainToolbar
-        mAppDrawer = AppDrawer(this, mToolbar)
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (ContextCompat.checkSelfPermission(APP_ACTIVITY, READ_CONTACTS)==PackageManager.PERMISSION_GRANTED){
+            initContacts()
+        }
     }
 }
