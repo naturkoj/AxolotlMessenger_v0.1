@@ -5,12 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.axolotlmessenger.R
 import com.example.axolotlmessenger.models.CommonModel
-import com.example.axolotlmessenger.ui.screens.single_chat.SingleChatFragment
 import com.example.axolotlmessenger.utilits.downloadAndSetImage
-import com.example.axolotlmessenger.utilits.replaceFragment
-import com.example.axolotlmessenger.utilits.showToast
 import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.add_contacts_item.view.*
 import kotlinx.android.synthetic.main.main_list_item.view.*

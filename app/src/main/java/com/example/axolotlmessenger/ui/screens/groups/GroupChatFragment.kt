@@ -9,7 +9,6 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.example.axolotlmessenger.R
 import com.example.axolotlmessenger.database.*
 import com.example.axolotlmessenger.models.CommonModel
 import com.example.axolotlmessenger.models.UserModel

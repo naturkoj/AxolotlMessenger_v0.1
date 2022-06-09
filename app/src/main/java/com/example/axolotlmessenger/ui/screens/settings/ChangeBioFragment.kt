@@ -1,6 +1,5 @@
 package com.example.axolotlmessenger.ui.screens.settings
 
-import com.example.axolotlmessenger.R
 import com.example.axolotlmessenger.database.*
 import com.example.axolotlmessenger.ui.screens.base.BaseChangeFragment
 import kotlinx.android.synthetic.main.fragment_cnage_bio.*

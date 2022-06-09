@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.axolotlmessenger.R
 import com.example.axolotlmessenger.models.CommonModel
 import com.example.axolotlmessenger.ui.screens.groups.GroupChatFragment
 import com.example.axolotlmessenger.ui.screens.single_chat.SingleChatFragment

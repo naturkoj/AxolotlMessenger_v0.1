@@ -1,10 +1,13 @@
 package com.example.axolotlmessenger.utilits
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.provider.ContactsContract
 import android.provider.OpenableColumns
+import android.support.annotation.RequiresApi
 import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import android.widget.Toast
@@ -52,6 +55,7 @@ fun replaceFragment(fragment: Fragment, addStack: Boolean = true) {
 }
 
 
+@RequiresApi(Build.VERSION_CODES.CUPCAKE)
 fun hideKeyboard() {
     /* Функция скрывает клавиатуру */
     val imm: InputMethodManager = APP_ACTIVITY.getSystemService(Context.INPUT_METHOD_SERVICE)
@@ -68,10 +72,12 @@ fun ImageView.downloadAndSetImage(url: String) {
         .into(this)
 }
 
+@RequiresApi(Build.VERSION_CODES.ECLAIR)
+@SuppressLint("Range")
 fun initContacts() {
     /* Функция считывает контакты с телефонной книги, хаполняет массив arrayContacts моделями CommonModel */
     if (checkPermission(READ_CONTACTS)) {
-        var arrayContacts = arrayListOf<CommonModel>()
+        val arrayContacts = arrayListOf<CommonModel>()
         val cursor = APP_ACTIVITY.contentResolver.query(
             ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
             null,
@@ -103,6 +109,7 @@ fun String.asTime(): String {
     return timeFormat.format(time)
 }
 
+@SuppressLint("Range")
 fun getFilenameFromUri(uri: Uri): String {
     var result = ""
     val cursor = APP_ACTIVITY.contentResolver.query(uri, null, null, null, null)
@@ -116,6 +123,7 @@ fun getFilenameFromUri(uri: Uri): String {
         cursor?.close()
         return result
     }
+
 }
 
 fun getPlurals(count:Int) = APP_ACTIVITY.resources.getQuantityString(

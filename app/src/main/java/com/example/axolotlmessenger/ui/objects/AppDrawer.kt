@@ -10,7 +10,6 @@ import com.example.axolotlmessenger.ui.screens.contacts.ContactsFragment
 import com.example.axolotlmessenger.ui.screens.settings.SettingsFragment
 import com.example.axolotlmessenger.utilits.APP_ACTIVITY
 import com.example.axolotlmessenger.database.USER
-import com.example.axolotlmessenger.ui.screens.groups.AddContactsAdapter
 import com.example.axolotlmessenger.ui.screens.groups.AddContactsFragment
 import com.example.axolotlmessenger.utilits.downloadAndSetImage
 import com.example.axolotlmessenger.utilits.replaceFragment

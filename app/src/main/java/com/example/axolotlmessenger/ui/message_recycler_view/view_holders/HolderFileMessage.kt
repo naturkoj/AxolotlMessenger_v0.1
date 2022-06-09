@@ -14,7 +14,7 @@ import com.example.axolotlmessenger.utilits.WRITE_FILES
 import com.example.axolotlmessenger.utilits.asTime
 import com.example.axolotlmessenger.utilits.checkPermission
 import com.example.axolotlmessenger.utilits.showToast
-import kotlinx.android.axolotlmessenger.main.message_item_file.view.*
+import kotlinx.android.synthetic.main.message_item_file.view.*
 import java.io.File
 import java.lang.Exception
 

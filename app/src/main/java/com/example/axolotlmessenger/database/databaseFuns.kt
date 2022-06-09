@@ -384,7 +384,7 @@ fun addGroupsToMainList(
 
 fun sendMessageToGroup(message: String, groupID: String, typeText: String, function: () -> Unit) {
 
-    var refMessages = "$NODE_GROUPS/$groupID/$NODE_MESSAGES"
+    val refMessages = "$NODE_GROUPS/$groupID/$NODE_MESSAGES"
     val messageKey = REF_DATABASE_ROOT.child(refMessages).push().key
 
     val mapMessage = hashMapOf<String, Any>()

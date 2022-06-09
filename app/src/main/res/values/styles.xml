@@ -25,10 +25,6 @@
         <item name="material_drawer_legacy_style">false</item> <!-- Enables legacy Material 1 style -->
     </style>
 
-    <style name="AppThemeDark" parent="MaterialDrawerTheme">
-        <!--TODO Темная тема-->
-    </style>
-
     <style name="actionMenu" parent="Theme.AppCompat.Light">
         <item name="background">@color/colorAccent</item>
         <item name="actionMenuTextColor">@color/colorBlack</item>

@@ -1,7 +1,6 @@
 package com.example.axolotlmessenger.ui.screens.register
 
 import androidx.fragment.app.Fragment
-import com.example.axolotlmessenger.R
 import com.example.axolotlmessenger.database.*
 import com.example.axolotlmessenger.utilits.*
 import com.google.firebase.auth.PhoneAuthProvider

@@ -2,7 +2,6 @@ package com.example.axolotlmessenger.ui.screens.register
 
 import androidx.fragment.app.Fragment
 
-import com.example.axolotlmessenger.R
 import com.example.axolotlmessenger.database.AUTH
 import com.example.axolotlmessenger.utilits.*
 import com.google.firebase.FirebaseException

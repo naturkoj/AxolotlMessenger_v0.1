@@ -13,14 +13,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:src="@drawable/default_photo"
-        app:civ_circle_background_color="@color/accent"
+        app:civ_circle_background_color="@color/colorAccent"
         android:layout_height="@dimen/toolbar_image_height"/>
 
     <TextView
         android:id="@+id/toolbar_chat_fullname"
         style="@style/normalText"
         tools:text="Yura Petrov"
-        android:textColor="@color/accent"
+        android:textColor="@color/colorAccent"
         app:layout_constraintStart_toEndOf="@id/toolbar_chat_image"
         app:layout_constraintTop_toTopOf="@id/toolbar_chat_image"/>
 

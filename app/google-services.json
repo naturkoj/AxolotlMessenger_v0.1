@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "488446477133",
+    "project_id": "axolotlmessenger",
+    "storage_bucket": "axolotlmessenger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488446477133:android:2ead65245ee762fe8a2d04",
+        "android_client_info": {
+          "package_name": "com.example.axolotlmessenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488446477133-pqk8o1so4troaqqi5mitfi59em8js910.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe6tGQXRJkvO1HnzJtkNsg6gq7KgQT4BI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488446477133-pqk8o1so4troaqqi5mitfi59em8js910.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
