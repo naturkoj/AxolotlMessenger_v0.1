@@ -14,6 +14,8 @@
     <color name="colorAccentDark">#DADADA</color>
     <color name="colorBlack">#000000</color>
     <color name="colorGrey">#737070</color>
+    <color name="colorGreen">#7CFC00</color>
+    <color name="colorGreenDark">#428105</color>
 
     <!-- Material DEFAULT colors -->
     <color name="material_drawer_primary">#2196F3</color>

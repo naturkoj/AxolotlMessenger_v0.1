@@ -9,8 +9,8 @@ import com.example.axolotlmessenger.R
 import com.example.axolotlmessenger.database.*
 import com.example.axolotlmessenger.ui.screens.base.BaseFragment
 import com.example.axolotlmessenger.utilits.*
-import com.theartofdev.edmodo.cropper.CropImage
-import com.theartofdev.edmodo.cropper.CropImageView
+import com.canhub.cropper.CropImage
+import com.canhub.cropper.CropImageView
 import kotlinx.android.synthetic.main.fragment_settings.*
 
 
