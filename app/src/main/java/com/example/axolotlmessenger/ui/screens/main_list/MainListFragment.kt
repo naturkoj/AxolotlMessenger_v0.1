@@ -2,6 +2,7 @@ package com.example.axolotlmessenger.ui.screens.main_list
 
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.example.axolotlmessenger.R
 import com.example.axolotlmessenger.database.*
 import com.example.axolotlmessenger.models.CommonModel
 import com.example.axolotlmessenger.utilits.*

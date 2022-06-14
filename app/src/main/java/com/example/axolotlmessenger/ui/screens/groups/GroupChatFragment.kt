@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.example.axolotlmessenger.R
 import com.example.axolotlmessenger.database.*
 import com.example.axolotlmessenger.models.CommonModel
 import com.example.axolotlmessenger.models.UserModel
@@ -86,7 +87,7 @@ class GroupChatFragment(private val group: CommonModel) :
                         chat_btn_voice.setColorFilter(
                             ContextCompat.getColor(
                                 APP_ACTIVITY,
-                                R.color.primary
+                                com.mikepenz.materialize.R.color.primary
                             )
                         )
                         val messageKey = getMessageKey(group.id)

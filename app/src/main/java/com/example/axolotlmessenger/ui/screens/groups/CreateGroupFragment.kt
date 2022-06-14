@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import androidx.recyclerview.widget.RecyclerView
+import com.example.axolotlmessenger.R
 import com.example.axolotlmessenger.database.*
 import com.example.axolotlmessenger.models.CommonModel
 import com.example.axolotlmessenger.ui.screens.base.BaseFragment
